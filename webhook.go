@@ -19,7 +19,23 @@ type Webhook struct {
 	HTTPBasicUsername string           `json:"httpBasicUsername,omitempty"`
 	HTTPBasicPassword string           `json:"httpBasicPassword,omitempty"`
 	Headers           []*WebhookHeader `json:"headers,omitempty"`
+	// Filters           []*WebhookFilters `json:"filters"`
 }
+
+// // WebhookFilters model
+// type WebhookFilters struct {
+// 	Equals []interface{}     `json:"equals,omitempty"`
+// 	In     []interface{}     `json:"in,omitempty"`
+// 	Regexp []interface{}     `json:"regexp,omitempty"`
+// 	Not    *WebhookFilterNot `json:"not,omitempty"`
+// }
+
+// // WebhookFilterNot model
+// type WebhookFilterNot struct {
+// 	Equals []interface{} `json:"equals,omitempty"`
+// 	In     []interface{} `json:"in,omitempty"`
+// 	Regexp []interface{} `json:"regexp,omitempty"`
+// }
 
 // WebhookHeader model
 type WebhookHeader struct {
